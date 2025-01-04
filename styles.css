@@ -1,30 +1,137 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: #fff;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+section {
+    padding: 20px;
     text-align: center;
 }
 
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* Header Section */
 header {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 50px 20px;
 }
 
-main {
-    padding: 20px;
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
+header h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/* Photo Section */
 section img {
     max-width: 80%;
     border: 5px solid #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 1s ease-in-out;
 }
 
-footer {
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.action-button {
     margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    width: 80%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form button {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
